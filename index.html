@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Metamorphosis</title>
+    <title>AW.Studio</title>
     <style>
         /* ===== RESET & BASE ===== */
         * {
@@ -300,7 +300,7 @@
             padding: 20px;
             background: 
                 linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
+                url('https://i.pinimg.com/736x/aa/bf/82/aabf825ca794c5be0e73eec109295dc2.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -705,7 +705,7 @@
     <div class="elegant-mode" id="elegantMode">
         <!-- Navigation -->
         <nav class="elegant-nav" id="elegantNav">
-            <div class="elegant-logo">METAMORPHOSIS</div>
+            <div class="elegant-logo">AW.Studio</div>
             <div class="elegant-menu">
                 <a href="#">Home</a>
                 <a href="#">Design</a>
@@ -867,36 +867,7 @@
             }
             
             // Auto-scroll function with callback
-            function autoScroll(targetY, duration, callback) {
-                const startY = window.scrollY;
-                const distance = targetY - startY;
-                const startTime = performance.now();
-                let isScrolling = true;
-                
-                function scrollStep(timestamp) {
-                    if (!isScrolling) return;
-                    
-                    const elapsed = timestamp - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const easeProgress = easeInOutCubic(progress);
-                    
-                    window.scrollTo(0, startY + (distance * easeProgress));
-                    
-                    if (progress < 1) {
-                        requestAnimationFrame(scrollStep);
-                    } else if (callback) {
-                        callback();
-                    }
-                }
-                
-                requestAnimationFrame(scrollStep);
-                
-                return {
-                    stop: function() {
-                        isScrolling = false;
-                    }
-                };
-            }
+
             
             // Easing function
             function easeInOutCubic(t) {
